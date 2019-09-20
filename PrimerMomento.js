@@ -16,17 +16,19 @@ stdin.addListener("data", function(d) {
         var idio1="Hola "+dato;
         var idio2="Hello "+dato;
         var idio3="Hallo "+dato;
+        var idio4="नमस्कार "+dato;
+        var idio5="γεια σας "+dato;
         fs.writeFile(
             `idioma Nombre ${ base }.txt` , 
-          idio1+idio2+idio3,
+          idio1+idio2+idio3+idio4,idio5,
             (err) => {
                 if (err) 
                   console.log(err);
-                console.log(`${ idio1} ${ idio2}`);
+                console.log(`${ idio1} ${ idio2} ${idio3} ${ idio4} ${ idio5}`);
             }
             
         );
-        console.log(`${ idio1} ${ idio2} ${idio3}`);
+        console.log(`${ idio1} ${ idio2} ${idio3} ${ idio4} ${ idio5}`);
     }else{
         console.log("No ingresaste un nombre");
     }
