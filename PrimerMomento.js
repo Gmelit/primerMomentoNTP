@@ -16,11 +16,11 @@ stdin.addListener("data", function(d) {
         var idio1="Hola "+dato;
         var idio2="Hello "+dato;
         var idio3="Hallo "+dato;
-        var idio4="नमस्कार "+dato;
-        var idio5="γεια σας "+dato;
+        var idio4="Ahoj "+dato;
+        var idio5="Tere "+dato;
         fs.writeFile(
             `idioma Nombre ${ base }.txt` , 
-          idio1+idio2+idio3+idio4,idio5,
+          idio1+idio2+idio3+idio4+idio5,
             (err) => {
                 if (err) 
                   console.log(err);
