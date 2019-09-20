@@ -15,9 +15,10 @@ stdin.addListener("data", function(d) {
         
         var idio1="Hola "+dato;
         var idio2="Hello "+dato;
+        var idio3="Hallo "+dato;
         fs.writeFile(
             `idioma Nombre ${ base }.txt` , 
-          idio1+idio2,
+          idio1+idio2+idio3,
             (err) => {
                 if (err) 
                   console.log(err);
@@ -25,7 +26,7 @@ stdin.addListener("data", function(d) {
             }
             
         );
-        console.log(`${ idio1} ${ idio2}`);
+        console.log(`${ idio1} ${ idio2} ${idio3}`);
     }else{
         console.log("No ingresaste un nombre");
     }
